@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Auction Login </title>
+    <link rel="stylesheet" href="auctionlgncss.css">
+
+    <script type="text/javascript">
+    	function valid()
+    	{
+    		var expun=/^[A-Za-z]+$/;
+    		var un=document.forms["actlgn"]["UserName"];
+			var pw=document.forms["actlgn"]["Password"];
+
+			if(!un.value.match(expun))
+			{
+				window.alert("Username should contain only Alphabets [A-Z or a-z] . . .")
+				UserName.focus();
+				return false;
+			}
+		}
+    </script>
+</head>
+<body>
+    <div class="loginbox">
+    	<img src="avatar.jpg" class="avatar">
+        <h1>Login Here as Auctioner</h1>
+       <form name="actlgn" action="auctionerlgn.php" onsubmit="return valid()" method="POST">
+            <p>Username</p>
+            <input type="text" name="UserName" id="UserName" placeholder="Enter Username" required>
+            <p>Password</p>
+            <input type="password" name="Password" id="Password" placeholder="Enter Password" required>
+			<br><br><br>
+            <input type="submit" name="auctionlgn" value="Login">
+        </form>
+        <input type="submit" name="signup" value="Sign Up" onclick="location.href='auctioner_register.html'">
+    </div>
+</body>
+</html>

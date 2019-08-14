@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Auction Login</title>
+    <link rel="stylesheet" href="auctioner_register.css">
+
+    <script type="text/javascript">
+    	function valid()
+    	{
+    		var expun=/^[A-Za-z]+$/;
+    		var un=document.forms["actrgs"]["UserName"];
+			var pw=document.forms["actrgs"]["Password"];
+			var uk=document.forms["actrgs"]["uniquekey"];
+			if(un.value=="" && pw.value=="")
+			{
+				window.alert("Please Enter Username and Password . . .");
+				UserName.focus();
+				return false;
+			}
+			else if(un.value=="")
+			{
+				window.alert("Please Enter UserName . . .");
+				UserName.focus();
+				return false;
+			}
+			if(!un.value.match(expun))
+			{
+				window.alert("Username should contain only Alphabets [A-Z or a-z] . . .")
+				UserName.focus();
+				return false;
+			}
+			if(pw.value=="")
+			{
+				window.alert("Enter Password . . .");
+				Password.focus();
+				return false;
+			}
+		}
+    </script>
+</head>
+<body>
+    <div class="loginbox">
+    	<img src="avatar.jpg" class="avatar">
+        <h1>Auctioner Registration</h1>
+
+       <form name="actrgs" action="auctioner_register.php" onsubmit="return valid()" method="POST">
+            <p>Username</p>
+            <input type="text" name="UserName" id="UserName" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="Password" id="Password" placeholder="Enter Password">
+            <p>Unique Key</p>
+            <input type="password" name="uniquekey" id="uniquekey" placeholder="Unique Key">
+            <input type="submit" name="signup" value="Register" id="Register">
+        </form>
+
+    </div>
+</body>
+</html>
