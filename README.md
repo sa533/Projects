@@ -1,6 +1,5 @@
 # Projects
-This Repository Contains projects
-Project Names:
+This Repository Contains Following Projects
 
   1.IPL Auction
   
