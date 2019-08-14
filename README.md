@@ -8,5 +8,3 @@ This Repository Contains Following Projects
   3.Rainfall Prediction
   
   4.E-Crime File Managment
-  
-  5.KBC Game
